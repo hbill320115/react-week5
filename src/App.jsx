@@ -7,7 +7,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const API_PATH = import.meta.env.VITE_API_PATH;
 
 function App() {
-  const [products, setProducts] = useState([]);  //產品列表
+  const [products, setProducts] = useState([]);  //產品列表@@
   const [tempProduct, setTempProduct] = useState([]); // 儲存暫存產品資料
 
 //  ============================================================================== 取得購物車
@@ -21,7 +21,7 @@ function App() {
     }
   }
 
-// ============================================================================== 取得產品API
+// ============================================================================== 取得產品API @@
   useEffect(() => {
     const getProducts = async () => {
       setIsScreenLoading(true);
@@ -56,7 +56,7 @@ function App() {
   const [qtySelect, setQtySelect] = useState(1);  // 選擇的數量 (預設 1)
 
 // ============================================================================== 【購物車】
-// ------------- 加入購物車 -------------
+// ------------- 加入購物車@@ -------------
 const addCartItem = async(product_id,qty)=>{
   setIsBtnLoading(true);
   try{
@@ -152,7 +152,7 @@ const updateCartItem = async(cartItem_id,product_id,qty) => {
       {/* 商品列表 + modal + 購物車列表 */}
       <div className="mt-4">
         <h3 className="text-center">菜單</h3>
-        {/* 商品列表 */}
+        {/* 商品列表 @@@*/}
         <table className="table align-middle table-striped">
           <thead className="table-primary">
             <tr className="text-center">
@@ -331,7 +331,7 @@ const updateCartItem = async(cartItem_id,product_id,qty) => {
           </div>
         )}
       </div>
-      {/* Loading */}
+      {/* Loading @@ */}
       {isScreenLoading && (      
         <div className="d-flex justify-content-center align-items-center"
           style={{
